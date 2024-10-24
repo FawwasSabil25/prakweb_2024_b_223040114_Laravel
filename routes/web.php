@@ -10,8 +10,10 @@ Route::get('/about', function () {
     return view('about', ['nama' => 'Fawwas Sabil']);
 });
 
-/*2 route baru
- * blog
- * 2 artikel. judul n isi
- * contact (Email n No telp)
-*/
+Route::get('/blog', function () {
+    return view('blog');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
