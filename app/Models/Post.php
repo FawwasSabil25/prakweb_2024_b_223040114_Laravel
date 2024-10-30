@@ -10,6 +10,7 @@ class Post extends Model{ //tabel posts
 
     use HasFactory;
     protected $fillable = ['title', 'author', 'slug', 'body'];
+    protected $with = ['author', 'category'];
 
     public function author(): BelongsTo{
         return $this->belongsTo(User::class);
